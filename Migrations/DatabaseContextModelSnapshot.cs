@@ -104,6 +104,32 @@ namespace APBD_Template.Migrations
                     b.HasKey("DoctorId");
 
                     b.ToTable("Doctors");
+
+                    b.HasData(
+                        new
+                        {
+                            DoctorId = 1,
+                            FirstName = "Anna",
+                            LastName = "Nowak",
+                            Phone = "123456789",
+                            Specialization = "Cardiology"
+                        },
+                        new
+                        {
+                            DoctorId = 2,
+                            FirstName = "Jan",
+                            LastName = "Kowalski",
+                            Phone = "987654321",
+                            Specialization = "Dermatology"
+                        },
+                        new
+                        {
+                            DoctorId = 3,
+                            FirstName = "Maria",
+                            LastName = "Wisniewska",
+                            Phone = "555666777",
+                            Specialization = "Neurology"
+                        });
                 });
 
             modelBuilder.Entity("APBD_Template.Entities.MedicalService", b =>
@@ -163,6 +189,32 @@ namespace APBD_Template.Migrations
                     b.HasKey("PatientId");
 
                     b.ToTable("Patients");
+
+                    b.HasData(
+                        new
+                        {
+                            PatientId = 1,
+                            DateOfBirth = new DateTime(1998, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "Karolina",
+                            LastName = "Kowalska",
+                            Phone = "111222333"
+                        },
+                        new
+                        {
+                            PatientId = 2,
+                            DateOfBirth = new DateTime(1987, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "Tomasz",
+                            LastName = "Nowicki",
+                            Phone = "222333444"
+                        },
+                        new
+                        {
+                            PatientId = 3,
+                            DateOfBirth = new DateTime(1975, 7, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "Ewa",
+                            LastName = "Maj",
+                            Phone = "333444555"
+                        });
                 });
 
             modelBuilder.Entity("APBD_Template.Entities.Appointment", b =>

@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace APBD_Template.Migrations
 {
     /// <inheritdoc />
-    public partial class migracja1 : Migration
+    public partial class initMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -111,6 +113,26 @@ namespace APBD_Template.Migrations
                         principalTable: "Medical_Services",
                         principalColumn: "ServiceId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Doctors",
+                columns: new[] { "DoctorId", "FirstName", "LastName", "Phone", "Specialization" },
+                values: new object[,]
+                {
+                    { 1, "Anna", "Nowak", "123456789", "Cardiology" },
+                    { 2, "Jan", "Kowalski", "987654321", "Dermatology" },
+                    { 3, "Maria", "Wisniewska", "555666777", "Neurology" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "PatientId", "DateOfBirth", "FirstName", "LastName", "Phone" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(1998, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), "Karolina", "Kowalska", "111222333" },
+                    { 2, new DateTime(1987, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Tomasz", "Nowicki", "222333444" },
+                    { 3, new DateTime(1975, 7, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), "Ewa", "Maj", "333444555" }
                 });
 
             migrationBuilder.CreateIndex(
