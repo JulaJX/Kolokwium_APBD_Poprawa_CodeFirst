@@ -16,5 +16,5 @@ public class Track
     public int LengthInKm { get; set; }
     
 
-    public IEnumerable<TrackRace> TrackRace { get; set; } = [];
+    public IEnumerable<TrackRace> TrackRaces { get; set; } = [];
 }

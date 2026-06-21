@@ -20,5 +20,5 @@ public class Race
     [Column(TypeName = "datetime")]
     public DateTime Date { get; set; }
     
-    public IEnumerable<TrackRace> TrackRace { get; set; } = [];
+    public IEnumerable<TrackRace> TrackRaces { get; set; } = [];
 }

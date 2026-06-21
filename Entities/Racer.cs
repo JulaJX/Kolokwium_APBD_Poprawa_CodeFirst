@@ -19,6 +19,6 @@ public class Racer
     public string LastName { get; set; } = string.Empty;
     
 
-    public IEnumerable<RaceParticipation> RaceParticipation { get; set; } = [];
+    public IEnumerable<RaceParticipation> RaceParticipations { get; set; } = [];
 
 }
