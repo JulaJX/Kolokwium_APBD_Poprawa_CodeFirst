@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace APBD_Template.Entities
+namespace APBD_Template.Entities;
 
     
-
+[Table("Racer")]
 public class Racer
 {
     [Key]

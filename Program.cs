@@ -1,5 +1,4 @@
 using APBD_Template.Data;
-using APBD_Template.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
