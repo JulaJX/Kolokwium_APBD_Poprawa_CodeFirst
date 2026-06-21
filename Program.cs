@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-builder.Services.AddScoped<IPatientService, PatientService>();
+//builder.Services.AddScoped<IPatientService, PatientService>();
 
 builder.Services.AddDbContext<DatabaseContext>(opt =>
 {
